@@ -1,18 +1,21 @@
 * {
-    font-family: HarmonyOSHans,sans-serif !important;
+    font-family: HarmonyOSHans,'Roboto','汉仪vivo定制可变黑体','Segoe UI Variable Display','Segoe UI','Simhei','黑体','Microsoft YaHei UI','微软雅黑',sans-serif !important;
 }
 
 body {
     background-color: #23252c;
 }
 
+header {
+
+}
 .form-signin {
     margin-left: 20%;
     margin-right: 20%;
 }
 
 #bone {
-    margin-top: 9.6%;
+    margin-top: 9.2%;
 }
 
 #jump {
@@ -35,6 +38,10 @@ body {
 }
 
 #haoran #promote {
+    font-size: small;
+}
+
+#hanxdota button {
     font-size: small;
 }
 

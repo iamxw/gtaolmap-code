@@ -25,7 +25,8 @@
                         <br>
                         此项目由 BootStrap 和 JQuery 共同驱动
                         <br>
-                        基于 B 站用户 <b><a class="text-info" href="https://space.bilibili.com/258524496">为所欲为_铲人术</a></b> 的代码作优化
+                        基于 B 站用户 <b><a class="text-info" href="https://space.bilibili.com/258524496">为所欲为_铲人术</a></b>
+                        的代码作优化
                         <br><br>
                         <span>
                             此版本新增的功能 : 修复了推广链接无法跳转的 BUG
@@ -72,16 +73,28 @@
         </div>
 
         <div class="form-label-group">
-            <input style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white"
+            <input style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white text-center"
                    placeholder="差事代码"
                    autofocus="" maxlength="30"/>
             <br>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
         <br>
-        <a id="haoran" href="https://space.bilibili.com/92466307"><button id="promote" type="button" class="btn btn-block btn-outline-danger">※ （推广）关注浩然 Yz</button></a>
-        <p id="info-for-up" class="text-center">※ B 站上目前最大的 GTA 跑图 UP 主</p>
-        <p class="mt-5 mb-3 text-muted text-center">
+        <p class="text-center">
+            <a id="haoran" href="https://space.bilibili.com/92466307">
+                <button id="promote" type="button" class="btn btn-sm btn-outline-success">※ （推广）关注浩然 Yz</button>
+            </a>
+            <a id="hanxdota" href="https://socialclub.rockstargames.com/member/Hanxdota/jobs">
+                <button type="button" class="btn btn-sm btn-outline-info">※ （推广）汉克斯刀塔的毒图，一键抠脚</button>
+            </a>
+        </p>
+        <p id="info-for-up" class="text-center">※1 B 站上目前最大的 GTA 跑图 UP 主；※2 Hanxdota 制作的差事页面</p>
+        <p class="text-center">
+            <a id="need-help" href="#">
+                <button type="button" class="btn btn-sm btn-outline-info" onclick="help()">不知道怎么用</button>
+            </a>
+        </p>
+        <p class="mt-0 mb-3 text-muted text-center">
             作者：莫涵达尔
             <br>
             项目已开源到 Github
@@ -91,6 +104,7 @@
             <span id="notice">
                 请注意：这只是一个跳转器，作者不对地图的任何内容负责
             </span>
+            <br><br>
         </p>
     </form>
 </div>
@@ -108,6 +122,10 @@
         } else {
             window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
         }
+    }
+
+    function help(){
+        alert('\n好吧，我早就料到会有人不会用这个了，所以我特意做了一个帮助\n')
     }
 </script>
 <script src="lib/jquery/jquery-3.6.3.min.js"></script>
