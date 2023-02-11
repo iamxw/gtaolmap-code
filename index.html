@@ -75,7 +75,7 @@
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
         <br>
-        <button id="promote" class="btn btn-block btn-outline-danger">※ （推广）关注浩然 Yz</button>
+        <button id="promote" class="btn btn-block btn-outline-danger" onclick="promoteBilibiliUp()">※ （推广）关注浩然 Yz</button>
         <p id="info-for-up" class="text-center">※ B 站上目前最大的 GTA 跑图 UP 主</p>
         <p class="mt-5 mb-3 text-muted text-center">
             作者：莫涵达尔
@@ -93,8 +93,13 @@
 <!-- 主体 END -->
 </body>
 <script>
+    // 差事跳转
     function Cmd() {
         window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
+    }
+    // UP主推广
+    function promoteBilibiliUp(){
+        window.location.href = ('https://space.bilibili.com/92466307');
     }
 </script>
 <script src="lib/jquery/jquery-3.6.3.min.js"></script>
