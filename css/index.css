@@ -30,7 +30,11 @@ body {
     font-weight: bold;
 }
 
-#promote {
+#haoran {
+    text-decoration: none;
+}
+
+#haoran #promote {
     font-size: small;
 }
 

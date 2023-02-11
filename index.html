@@ -21,14 +21,14 @@
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">关于</h4>
                     <p class="text-muted">
-                        版本：1.1 Release
+                        版本：1.11 Release
                         <br>
                         此项目由 BootStrap 和 JQuery 共同驱动
                         <br>
                         基于 B 站用户 <b><a class="text-info" href="https://space.bilibili.com/258524496">为所欲为_铲人术</a></b> 的代码作优化
                         <br><br>
                         <span>
-                            此版本新增的功能 : 文字判断，文字最大长度为 30 个字符
+                            此版本新增的功能 : 修复了推广链接无法跳转的 BUG
                         </span>
                     </p>
                 </div>
@@ -79,8 +79,7 @@
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
         <br>
-        <button id="promote" class="btn btn-block btn-outline-danger" onclick="promoteBilibiliUp()">※ （推广）关注浩然 Yz
-        </button>
+        <a id="haoran" href="https://space.bilibili.com/92466307"><button id="promote" type="button" class="btn btn-block btn-outline-danger">※ （推广）关注浩然 Yz</button></a>
         <p id="info-for-up" class="text-center">※ B 站上目前最大的 GTA 跑图 UP 主</p>
         <p class="mt-5 mb-3 text-muted text-center">
             作者：莫涵达尔
@@ -109,11 +108,6 @@
         } else {
             window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
         }
-    }
-
-    // UP主推广
-    function promoteBilibiliUp() {
-        window.location.href = ('https://space.bilibili.com/92466307');
     }
 </script>
 <script src="lib/jquery/jquery-3.6.3.min.js"></script>
