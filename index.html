@@ -74,9 +74,15 @@
                 <br><br>
                 <span style="color: tan">如果你有完整的链接，那你完全不需要使用这个</span>
                 <br><br>
-                如果你只有地图代码的话，比如：B 站 UP 主“浩然 Yz”的视频简介，因为【你懂的】的原因，不能放全链接，这时候就需要这个工具了
+                如果你只有地图代码的话，比如：B 站 UP 主“浩然 Yz”的视频简介，因为某些
+                <span style="color: tan">你懂的</span>
+                的原因，不能放全链接，这时候就需要这个工具了
                 <br><br>
-                目前，你只需要复制一下 UP 主给的代码，然后把<span style="color: tan">不是代码的部分</span>删除掉就行，记得不要留有空格哦。
+                目前，你只需要复制一下 UP 主给的代码，然后把
+                <span style="color: tan">不是代码的部分</span>
+                删除掉就行，记得
+                <span style="color: tan">不要留有空格</span>
+                哦。
                 <br><br>
                 就是这些了。
                 <br><br>
@@ -118,10 +124,10 @@
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
         <br>
         <p class="text-center">
-            <a id="haoran" href="https://space.bilibili.com/92466307">
+            <a id="haoran" href="https://space.bilibili.com/92466307" target="_blank">
                 <button id="promote" type="button" class="btn btn-sm btn-outline-success">※ （推广）关注浩然 Yz</button>
             </a>
-            <a id="hanxdota" href="https://socialclub.rockstargames.com/member/Hanxdota/jobs">
+            <a id="hanxdota" href="https://socialclub.rockstargames.com/member/Hanxdota/jobs" target="_blank">
                 <button type="button" class="btn btn-sm btn-outline-info">※ （推广）汉克斯刀塔的毒图，一键抠脚</button>
             </a>
         </p>
@@ -132,7 +138,7 @@
             </a>
         </p>
         <p class="mt-0 mb-3 text-muted text-center">
-            作者：莫涵达尔
+            <a class="text-white-50" href="https://marshmallowlands.github.io/about/" target="_blank"><b>作者：莫涵达尔【点我了解我是谁】</b></a>
             <br>
             项目已开源到 Github
             <br>
@@ -157,7 +163,9 @@
             notice2.textContent = "!!! 你没有输入任何内容 !!!"
             notice2.style.color = '#dc3545'
         } else {
-            window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
+            // window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
+            // 新建标签页打开，而不是在当前页打开
+            window.open('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
         }
     }
 </script>

@@ -1,5 +1,5 @@
 * {
-    font-family: HarmonyOSHans,'Roboto','汉仪vivo定制可变黑体','Segoe UI Variable Display','Segoe UI','Simhei','黑体','Microsoft YaHei UI','微软雅黑',sans-serif !important;
+    font-family: 'Roboto','汉仪vivo定制可变黑体',HarmonyOSHans,'Segoe UI Variable Display','Segoe UI','Simhei','黑体','Microsoft YaHei UI','微软雅黑',sans-serif !important;
 }
 
 body {
@@ -55,8 +55,5 @@ header {
 }
 
 #modal-body {
-    padding-left: 35pt;
-    padding-right: 35pt;
-    padding-top: 15pt;
-    padding-bottom: 15pt;
+    padding: 15pt 35pt;
 }
