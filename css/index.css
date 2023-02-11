@@ -12,7 +12,7 @@ body {
 }
 
 #bone {
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 #jump {
@@ -28,4 +28,13 @@ body {
 
 #notice2 {
     font-weight: bold;
+}
+
+#promote {
+    font-size: small;
+}
+
+#info-for-up {
+    color: #5a6268;
+    font-size: smaller;
 }
