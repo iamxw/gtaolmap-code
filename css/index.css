@@ -49,3 +49,14 @@ header {
     color: #5a6268;
     font-size: smaller;
 }
+
+#myModal {
+    margin-top: 15pt;
+}
+
+#modal-body {
+    padding-left: 35pt;
+    padding-right: 35pt;
+    padding-top: 15pt;
+    padding-bottom: 15pt;
+}
