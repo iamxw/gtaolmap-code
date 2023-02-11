@@ -4,77 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GTA5 地图代码快捷跳转器</title>
     <link rel="stylesheet" href="lib/bootstrap-4.6.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
-    
+
 </head>
 
 <body>
-    <!-- NAV 栏目 START -->
-    <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">关于</h4>
-                        <p class="text-muted">
-                            版本：1.0 Beta
-                            <br>
-                            此项目由 BootStrap 和 JQuery 共同驱动
-                            <br>
-                            基于 B 站用户 <b style="color: rgb(180, 90, 155);">为所欲为_铲人术</b> 的代码作优化
-                        </p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">联系我</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="tencent://message/?uin=3266681669&Site=&Menu=yes" class="text-white">加我 QQ</a>
-                            </li>
-                            <li><a href="mailto:3266681669@qq.com" class="text-white">给我发邮件</a></li>
-                        </ul>
-                    </div>
+<!-- NAV 栏目 START -->
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">关于</h4>
+                    <p class="text-muted">
+                        版本：1.0 Beta
+                        <br>
+                        此项目由 BootStrap 和 JQuery 共同驱动
+                        <br>
+                        基于 B 站用户 <b style="color: rgb(180, 90, 155);">为所欲为_铲人术</b> 的代码作优化
+                    </p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">联系我</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="tencent://message/?uin=3266681669&Site=&Menu=yes" class="text-white">加我 QQ</a>
+                        </li>
+                        <li><a href="mailto:3266681669@qq.com" class="text-white">给我发邮件</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>GTA V 差事代码快捷跳转</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- NAV 栏目 END -->
-    <div>
-        <form class="form-signin">
-            <div class="text-center mb-4">
-                <h1 id="bone" class="h3 mb-3 font-weight-normal text-white"><b>Grand Theft Auto V 差事代码跳转</b></h1>
-                <p class="text-white">
-                    在下面输入地图代码，<span style="color: rgb(255, 165, 180);">目前只允许输入地图代码</span>，输入完成后
-                    <br>
-                    点击 <span id="jump">跳转</span> 即可
-                </p>
-            </div>
-
-            <div class="form-label-group">
-                <input type="text" id="inputMapCode" class="form-control" placeholder="在此键入 GTA 地图代码" required=""
-                    autofocus="">
-                <label for="inputMapCode">Email address</label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="cmd()" id="jump-to-rockstar">跳转</button>
-            <br><br>
-            <p class="mt-5 mb-3 text-muted text-center">作者：莫涵达尔<br>项目已开源到 Github<br>欢迎提出 issues，也欢迎对代码做出改进，让项目变得更棒</p>
-        </form>
     </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>GTA V 差事代码快捷跳转</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- NAV 栏目 END -->
+<div>
+    <form class="form-signin">
+        <div class="text-center mb-4">
+            <h1 id="bone" class="h3 mb-3 font-weight-normal text-white"><b>GTA V 差事代码跳转</b></h1>
+            <p class="text-white">
+                在下面输入地图代码，<span style="color: rgb(255, 165, 180);">目前只允许输入地图代码</span>，输入完成后
+                <br>
+                点击 <span id="jump">跳转</span> 即可
+            </p>
+        </div>
+
+        <div class="form-label-group">
+            <input type="text" id="inputMapCode" class="form-control" placeholder="在此键入 GTA 地图代码" required=""
+                   autofocus="">
+            <label for="inputMapCode">Email address</label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="function cmd() {
+                window.onload = function () {
+                let mapCode = document.querySelector('#inputMapCode');
+                let jump = document.querySelector('#jump-to-rockstar');
+                jump.addEventListener('click', function () {
+                window.location = 'https://socialclub.rockstargames.com/job/gtav' + mapCode.value;
+                    })
+            }
+            }
+            cmd()" id="jump-to-rockstar">
+            跳转
+        </button>
+        <br><br>
+        <p class="mt-5 mb-3 text-muted text-center">作者：莫涵达尔<br>项目已开源到 Github<br>欢迎提出 issues，也欢迎对代码做出改进，让项目变得更棒</p>
+    </form>
+</div>
 </body>
 <script src="lib/jquery/jquery-3.6.3.min.js"></script>
 <script src="lib/bootstrap-4.6.2-dist/js/bootstrap.js"></script>
-<script src="js/index.js"></script>
-
 </html>
