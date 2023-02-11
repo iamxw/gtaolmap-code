@@ -7,6 +7,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GTA5 地图代码快捷跳转器</title>
     <link rel="stylesheet" href="lib/bootstrap-4.6.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-icons-1.10.3/bootstrap-icons.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -51,6 +52,7 @@
     </div>
 </header>
 <!-- NAV 栏目 END -->
+<!-- 主体 START -->
 <div>
     <form class="form-signin">
         <div class="text-center mb-4">
@@ -59,22 +61,39 @@
                 在下面输入地图代码，<span style="color: rgb(255, 165, 180);">目前只允许输入地图代码</span>，输入完成后
                 <br>
                 点击 <span id="jump">跳转</span> 即可
+                <br><br>
+                <span id="notice2">
+                    <i class="bi bi-exclamation-square-fill">&nbsp;</i>输入框内不要出现中文
+                </span>
             </p>
         </div>
 
         <div class="form-label-group">
-            <input type="text" id="txt-code-id" class="form-control bg-dark text-white" placeholder="在此键入 GTA 地图代码" required="" autofocus="" />
+            <input style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white"
+                   placeholder="差事代码"
+                   required="" autofocus="" maxlength="45"/>
             <br>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
         <br><br>
-        <p class="mt-5 mb-3 text-muted text-center">作者：莫涵达尔<br>项目已开源到 Github<br>欢迎提出 issues，也欢迎对代码做出改进，让项目变得更棒</p>
+        <p class="mt-5 mb-3 text-muted text-center">
+            作者：莫涵达尔
+            <br>
+            项目已开源到 Github
+            <br>
+            欢迎提出 issues，也欢迎对代码做出改进，让项目变得更棒
+            <br>
+            <span id="notice">
+                请注意：这只是一个跳转器，作者不对地图的任何内容负责
+            </span>
+        </p>
     </form>
 </div>
+<!-- 主体 END -->
 </body>
 <script>
     function Cmd() {
-        window.location.href = 'https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value;
+        window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
     }
 </script>
 <script src="lib/jquery/jquery-3.6.3.min.js"></script>
