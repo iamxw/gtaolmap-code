@@ -21,7 +21,7 @@
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">关于</h4>
                     <p class="text-muted">
-                        版本：1.13 Release
+                        版本：1.14 Release
                         <br>
                         此项目由 BootStrap 和 JQuery 共同驱动
                         <br>
@@ -29,7 +29,7 @@
                         的代码作优化
                         <br><br>
                         <span>
-                            此版新增功能 : 无新增功能，细节优化以及 BUG 修复
+                            此版新增功能 : 现在可以自动识别中文并剥除了
                         </span>
                     </p>
                 </div>
@@ -130,7 +130,7 @@
         </div>
 
         <div class="form-label-group">
-            <input style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white text-center"
+            <input onkeyup="this.value=this.value.replace(/[^w\_]/g,'')" style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white text-center"
                    placeholder="差事代码"
                    autofocus="" maxlength="30"/>
             <br>
