@@ -46,6 +46,11 @@ header {
     margin-top: 4px;
 }
 
+#LY86 button {
+    font-size: small;
+    margin-top: 4px;
+}
+
 #info-for-up {
     color: #5a6268;
     font-size: smaller;

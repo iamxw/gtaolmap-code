@@ -21,7 +21,7 @@
                 <div class="col-sm-8 col-md-7 py-4">
                     <h4 class="text-white">关于</h4>
                     <p class="text-muted">
-                        版本：1.14 Release
+                        版本：1.15 Release
                         <br>
                         此项目由 BootStrap 和 JQuery 共同驱动
                         <br>
@@ -124,7 +124,7 @@
                 点击 <span id="jump">跳转</span> 即可
                 <br><br>
                 <span id="notice2">
-                    <i class="bi bi-exclamation-square-fill">&nbsp;</i>注意 : 输入框内不要出现中文
+                    <i class="bi bi-exclamation-square-fill">&nbsp;</i>注意 : 输入框内不要出现中文、空格，还有中文的标点符号！
                 </span>
             </p>
         </div>
@@ -132,7 +132,7 @@
         <div class="form-label-group">
             <input oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')"  style="border: none" type="text" id="txt-code-id" class="form-control bg-dark text-white text-center"
                    placeholder="差事代码"
-                   autofocus="" maxlength="30"/>
+                   autofocus="" maxlength="40"/>
             <br>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
@@ -147,10 +147,17 @@
             <a id="hanxdota" href="https://socialclub.rockstargames.com/member/Hanxdota/jobs" target="_blank">
                 <button type="button" class="btn btn-sm btn-outline-info">※ （推广）汉克斯刀塔的毒图，一键抠脚</button>
             </a>
+            <br>
+            <a id="LY86" href="https://space.bilibili.com/6241389" target="_blank">
+                <button type="button" class="btn btn-sm btn-outline-warning">※ （推广）LY66666666 的 B 站</button>
+            </a>
         </p>
         <!-- 推广 END -->
 
-        <p id="info-for-up" class="text-center">【※1】 B 站上目前最大的 GTA 跑图 UP 主；【※2】 Hanxdota 制作的差事页面</p>
+        <p id="info-for-up" class="text-center">
+            【※1】 B 站上目前最大的 GTA 跑图 UP 主；【※2】 Hanxdota 制作的差事页面；
+            【※3】某位“正常发挥”的 UP 主
+        </p>
         <p class="text-center">
             <a data-toggle="modal" data-target="#myModal" id="need-help" href="#example">
                 <button type="button" class="btn btn-sm btn-outline-info">不知道怎么用，那就点我</button>
