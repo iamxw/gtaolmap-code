@@ -138,7 +138,7 @@
                    autofocus="" maxlength="40"/>
             <br>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar">跳转</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Cmd()" id="jump-to-rockstar"><i class="bi bi-link-45deg">&nbsp;</i>跳转</button>
         <br>
 
         <!-- 推广 START -->
@@ -163,7 +163,7 @@
         </p>
         <p class="text-center">
             <a data-toggle="modal" data-target="#myModal" id="need-help" href="#example">
-                <button type="button" class="btn btn-sm btn-outline-info">不知道怎么用，那就点我</button>
+                <button type="button" class="btn btn-sm btn-outline-info"><i class="bi bi-patch-question-fill">&nbsp;</i>不知道怎么用，那就点我</button>
             </a>
         </p>
         <p class="mt-0 mb-3 text-muted text-center">
@@ -176,7 +176,7 @@
             没错，我就是为了醋包的这顿饺子。
             <br>
             <span id="notice">
-                免责声明：这只是一个跳转器，作者不对地图的任何内容负责
+                免责声明：这只是一个跳转器，跳转器作者不对第三方差事地图里的任何内容负责。
             </span>
             <br><br>
         </p>
@@ -189,10 +189,12 @@
     function Cmd() {
         let txtCode = document.querySelector("#txt-code-id");
         let notice2 = document.querySelector("#notice2");
-        let jumpToRockstar = document.querySelector('#jump-to-rockstar')
         if (txtCode.value === '') {
-            notice2.textContent = "!!! 你没有输入任何内容 !!!"
-            notice2.style.color = '#dc3545'
+            notice2.textContent = "✖" + " " + "错误，你似乎没输入内容";
+            notice2.style.color = 'white';
+            notice2.style.backgroundColor = "#884e54";
+            notice2.style.borderRadius = "10px";
+            notice2.style.padding = "13px";
         } else {
             // window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
             // 新建标签页打开，而不是在当前页打开
