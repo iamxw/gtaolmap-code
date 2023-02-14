@@ -192,9 +192,12 @@
         if (txtCode.value === '') {
             notice2.textContent = "✖" + " " + "错误，你似乎没输入内容";
             notice2.style.color = 'white';
-            notice2.style.backgroundColor = "#884e54";
+            notice2.style.backgroundColor = "#c02d3b";
             notice2.style.borderRadius = "10px";
-            notice2.style.padding = "13px";
+            notice2.style.paddingLeft = "13px";
+            notice2.style.paddingRight = "13px";
+            notice2.style.paddingTop = "6px";
+            notice2.style.paddingBottom = "6px";
         } else {
             // window.location.href = ('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('txt-code-id').value);
             // 新建标签页打开，而不是在当前页打开
