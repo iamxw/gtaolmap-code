@@ -32,3 +32,8 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#notice {
+    padding: 8px;
+    border-radius: 4px;
+}
