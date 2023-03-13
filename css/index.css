@@ -25,3 +25,10 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+
+#more-author {
+    border-radius: 100px;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+}
