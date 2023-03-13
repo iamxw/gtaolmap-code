@@ -35,7 +35,7 @@
                    class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">差事代码</label>
         </div>
-        <button id="submit-code-button" class="w-40 btn btn-lg btn-primary"><i
+        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-lg btn-primary"><i
                 class="bi bi-box-arrow-up-right">&nbsp;</i>进入差事
         </button>
         <p class="mt-3 mb-3 text-muted text-center"><i
@@ -218,4 +218,11 @@
 </footer>
 </body>
 <script src="lib/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
+<script src="lib/jquery/jquery-3.6.3.min.js"></script>
+<script>
+    // 差事跳转
+    function Cmd() {
+        window.open('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('floatingInput').value);
+    }
+</script>
 </html>
