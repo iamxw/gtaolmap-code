@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@400;700&display=swap');
 * {
-    font-family: "Chakra Petch","Roboto","Segoe UI Variable Display","HarmonyOSHans","Noto Sans SC","Simhei","黑体","微软雅黑","Microsoft YaHei UI",sans-serif;
+    font-family: 'HarmonyOSHans','Microsoft YaHei',sans-serif;
 }
 
 #title-bar {
