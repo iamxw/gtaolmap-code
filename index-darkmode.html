@@ -10,31 +10,31 @@
     <link rel="stylesheet" href="lib/bootstrap-icons-1.10.3/bootstrap-icons.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
+<body class="bg-dark">
 <!--标题栏部分-->
-<div class="container fixed-top bg-opacity-50 bg-white" id="title-bar">
-    <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
+<div class="container fixed-top bg-opacity-50 bg-dark" id="title-bar">
+    <header class="d-flex flex-wrap justify-content-center py-3">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <img class="bi me-2" width="40" height="32" src="stars.svg" alt="GTA 5 差事代码快捷跳转器"/>
-            <span id="header-title" class="fs-4 fw-bold">GTA 在线模式差事代码跳转器</span>
+            <span id="header-title" class="fs-4 fw-bold text-white">GTA 在线模式差事代码跳转器</span>
         </a>
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">代码输入</a></li>
-            <li class="nav-item"><a href="#help" class="nav-link">帮助</a></li>
-            <li class="nav-item"><a href="#author-recommend" class="nav-link">作者推荐</a></li>
-            <li class="nav-item"><a href="#recommend-errands" class="nav-link">地图推荐</a></li>
-            <li class="nav-item"><a href="index-darkmode.html" class="btn btn-info">深色模式</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-success" aria-current="page">代码输入</a></li>
+            <li class="nav-item"><a href="#help" class="nav-link text-success">帮助</a></li>
+            <li class="nav-item"><a href="#author-recommend" class="nav-link text-success">作者推荐</a></li>
+            <li class="nav-item"><a href="#recommend-errands" class="nav-link text-success">地图推荐</a></li>
+            <li class="nav-item"><a href="index.html" class="btn btn-info">浅色模式</a></li>
         </ul>
     </header>
 </div>
 <!--输入代码部分-->
 <main class="form-signin w-100 m-auto d-lg-flex mt-5 pt-5 text-center justify-content-around">
     <form>
-        <h1 class="h3 mt-5 mb-3 fw-bold">在下方输入差事代码</h1>
+        <h1 class="h3 mt-5 mb-3 fw-bold text-white">在下方输入差事代码</h1>
         <div id="input-label" class="form-floating mb-3">
             <input maxlength="40" oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
-                   class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">差事代码</label>
+                   class="form-control bg-dark text-white" id="floatingInput" placeholder="name@example.com">
+            <label class="text-white" for="floatingInput">差事代码</label>
         </div>
         <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-lg btn-primary"><i
                 class="bi bi-box-arrow-up-right">&nbsp;</i>进入差事
@@ -48,11 +48,11 @@
 <div class="col-lg-8 mx-auto pt-4 p-4 py-md-5" id="help">
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4 fw-bold">帮助</span>
+            <span class="fs-4 fw-bold text-white">帮助</span>
         </a>
     </header>
 
-    <main class="text-black">
+    <main class="text-white">
         <h2 class="fw-bold">该工具只给 Grand Theft Auto V 在线模式使用，不是地平线 5！！</h2>
         <br>
         起因就是有某个小可爱 5 和 5 傻傻分不清。当时我就乐了，哈哈哈哈哈。
@@ -91,17 +91,17 @@
 </div>
 <!--作者推荐部分-->
 <div class="container px-4 py-5 pt-4" id="author-recommend">
-    <h2 class="pb-2 border-bottom fw-bold">作者推荐</h2>
+    <h2 class="pb-2 border-bottom fw-bold text-white">作者推荐</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <img width="50px" height="50px" src="img/author-avatar/haoran6rer.jpg" alt=""/>
             </div>
-            <h3 class="fs-2">浩然</h3>
-            <p>
+            <h3 class="fs-2 text-white">浩然</h3>
+            <p class="text-white">
                 作为在 B 站上目前最大的 GTA 跑图 UP 主，必须有他，下边是他做的差事的链接，可供各位挑选
                 <br>
-                <span class="text-black-50">包含多个账号，将跳转到我的博客查看详情</span>
+                <span class="text-white-50">包含多个账号，将跳转到我的博客查看详情</span>
             </p>
             <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/#%E6%B5%A9%E7%84%B6"
                class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
@@ -112,8 +112,8 @@
             <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <img width="50px" height="50px" src="img/author-avatar/Haxdota.jpg" alt=""/>
             </div>
-            <h3 class="fs-2">汉克斯刀塔</h3>
-            <p>
+            <h3 class="fs-2 text-white">汉克斯刀塔</h3>
+            <p class="text-white">
                 群友们一般叫他刀老师、刀哥，叫啥的都有
                 <br>
                 他做的差事可不是一般的毒。在国内的
@@ -129,8 +129,8 @@
             <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <img width="50px" height="50px" src="img/author-avatar/LY86.jpg" alt=""/>
             </div>
-            <h3 class="fs-2">拔溜（LY66666666）</h3>
-            <p>
+            <h3 class="fs-2 text-white">拔溜（LY66666666）</h3>
+            <p class="text-white">
                 拔溜的图狗都不玩（DOGE）（🐶）。
                 <br>
                 86 的图喜欢把各种载具玩出花来，虽然细节上
@@ -146,7 +146,7 @@
 </div>
 <!--地图推荐-->
 <div class="container px-4 py-5" id="recommend-errands">
-    <h2 class="pb-2 border-bottom fw-bold">Recommended errands 推荐的差事</h2>
+    <h2 class="pb-2 border-bottom fw-bold text-white">Recommended errands 推荐的差事</h2>
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
@@ -217,7 +217,7 @@
 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
     <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/" target="_blank" class="btn btn-outline-success btn-lg px-4 gap-3" id="more-author"><i class="bi bi-arrow-bar-right">&nbsp;</i>更多差事作者..</a>
 </div>
-<p class="text-black-50 text-center mt-1">点此将跳转到我的博客页</p>
+<p class="text-white-50 text-center mt-1">点此将跳转到我的博客页</p>
 <!--页脚-->
 <footer id="foot-info" class="pt-5 my-5 text-muted border-top justify-content-center text-center">
     版本：2.1
