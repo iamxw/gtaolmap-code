@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
 * {
-    font-family: 'Chakra Petch','HarmonyOSHans','Microsoft YaHei UI',sans-serif;
+    font-family: 'Chakra Petch','HarmonyOSHans','Noto Sans SC','Microsoft YaHei UI',sans-serif;
 }
 
 #title-bar {
