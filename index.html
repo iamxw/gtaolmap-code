@@ -18,10 +18,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
                 <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
             </svg>
+            &nbsp;
             <span id="header-title" class="fs-4 fw-bold">GTA 在线模式差事代码跳转器</span>
         </a>
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">代码和帮助</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">代码帮助</a></li>
             <li class="nav-item"><a href="#author-recommend" class="nav-link">作者推荐</a></li>
             <li class="nav-item"><a href="#recommend-errands" class="nav-link">地图推荐</a></li>
         </ul>
@@ -30,16 +31,16 @@
 <!--输入代码部分-->
 <main class="form-signin w-100 m-auto d-lg-flex mt-5 pt-5 text-center justify-content-around">
     <form>
-        <h1 class="h3 mt-5 mb-3 fw-bold">在下方输入差事代码</h1>
+        <h1 class="h3 mt-4 mb-3 fw-bold">&nbsp;</h1>
         <div id="input-label" class="form-floating mb-3">
             <input maxlength="40" oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
                    class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">差事代码</label>
         </div>
-        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-lg btn-primary"><i
+        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-primary"><i
                 class="bi bi-box-arrow-up-right">&nbsp;</i>进入差事
         </button>
-        <a href="index-darkmode.html" class="btn btn-lg btn-info"><i class="bi bi-moon-fill">&nbsp;</i>深色模式</a>
+        <a href="index-darkmode.html" class="btn btn-info"><i class="bi bi-moon-fill">&nbsp;</i>深色模式</a>
         <p class="mt-3 mb-3 text-muted text-center"><i
                 class="bi bi-lightbulb-fill text-warning">&nbsp;</i><br>请注意：代码通常只有<span
                 class="text-danger fw-bold"><br>数字、英文以及英文的 - 和 _ 标点符号组成</span><br>不能有空格、冒号、中文、以及中文的标点符号<br>最多 40 字</p>
@@ -49,15 +50,13 @@
 <div class="col-lg-8 mx-auto pt-4 p-4 py-md-5" id="help">
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4 fw-bold">帮助</span>
+            <span class="fs-4 fw-bold">使用帮助</span>
         </a>
     </header>
 
     <main class="text-black">
-        <h2 class="fw-bold">该工具只给 Grand Theft Auto V 在线模式使用，不是地平线 5！！</h2>
-        <br>
-        起因就是有某个小可爱 5 和 5 傻傻分不清。当时我就乐了，哈哈哈哈哈。
-        <br><br><br><br>
+        <h3 class="fw-bold">此工具只能给 GTA 在线模式使用</h3>
+        <br><br>
         其实我就是为的这盘“醋”，包的这顿“饺子”
         <br><br>
         好吧，我早就料到会有人不会用这个了，所以我特意做了一个帮助
@@ -85,9 +84,11 @@
         电脑用户只需要选中并拖拽到输入框，然后点击进入就可以了。
         <br><br>
         没多难
+        <br><br>
+        本项目已经开源，欢迎各位审核代码
     </main>
-    <footer class="pt-5 my-5 text-muted border-top">
-        于 2023 年 3 月 13 日修改
+    <footer class="pt-5 my-5 text-muted">
+        于 2023 年 3 月 17 日修改
     </footer>
 </div>
 <!--作者推荐部分-->
@@ -107,7 +108,7 @@
             </p>
             <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/#%E6%B5%A9%E7%84%B6"
                class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-primary text-decoration-none">去逝逝</button>
+                <button class="btn btn-success text-decoration-none">去逝逝</button>
             </a>
         </div>
         <div class="feature col">
@@ -141,7 +142,7 @@
             </p>
             <a href="https://socialclub.rockstargames.com/member/LY66666666/jobs"
                class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-primary text-decoration-none">谁点谁是 DOG 🐶，点击查看</button>
+                <button class="btn btn-warning text-decoration-none">谁点谁是 DOG 🐶，点击查看</button>
             </a>
         </div>
     </div>
@@ -149,7 +150,8 @@
 <!--地图推荐-->
 <div class="mt-5 pt-5 container px-4 py-5" id="recommend-errands">
     <br><br>
-    <h2 class="pb-2 border-bottom fw-bold">Recommended errands 推荐的差事</h2>
+    <h2 class="pb-2 border-bottom fw-bold">推荐的差事</h2>
+    <span class="text-black-50">不建议萌新现在就上手，难度较高</span>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
             <div id="er-1" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
@@ -222,7 +224,7 @@
 <p class="text-black-50 text-center mt-1">点此将跳转到我的博客页</p>
 <!--页脚-->
 <footer id="foot-info" class="pt-5 my-5 text-muted border-top justify-content-center text-center">
-    版本：2.1
+    版本：2.2
     <br><br>
     作者：莫涵达尔
     <br><br>
@@ -235,9 +237,7 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <span>猫头鹰超市我</span>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    快来撅我
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     鸡鸡鸡鸡贝比贝比贝
     <br><br>
