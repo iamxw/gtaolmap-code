@@ -33,7 +33,7 @@
     <form>
         <h1 class="h3 mt-4 mb-3 fw-bold">&nbsp;</h1>
         <div id="input-label" class="form-floating mb-3">
-            <input maxlength="40" onkeydown="value=value.replace(/\s+/g,'')" oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
+            <input maxlength="40" onfocus="value=value.replace(/\s+/g,'')" onkeypress="value=value.replace(/\s+/g,'')" onkeyup="value=value.replace(/\s+/g,'')" onkeydown="value=value.replace(/\s+/g,'')" oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
                    class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">差事代码</label>
         </div>
@@ -224,13 +224,15 @@
 <p class="text-black-50 text-center mt-1">点此将跳转到我的博客页</p>
 <!--页脚-->
 <footer id="foot-info" class="pt-5 my-5 text-muted border-top justify-content-center text-center">
-    版本：2.2
+    版本：2.3
     <br><br>
     作者：莫涵达尔
     <br><br>
     QQ 号：3266681669
     <br><br>
     了解我是谁：<a class="text-decoration-none" href="https://marshmallowlands.github.io/about/" target="_blank">https://marshmallowlands.github.io/about/</a>
+    <br><br>
+    此次更新日志：修复了输入框空格字符的BUG
     <br><br>
     <span class="text-danger">免责声明：这只是一个跳转器，跳转器作者不对第三方差事地图里的任何内容负责</span>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
