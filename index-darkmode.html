@@ -33,7 +33,7 @@
     <form>
         <h1 class="h3 mt-4 mb-3 fw-bold text-white">&nbsp;</h1>
         <div id="input-label" class="form-floating mb-3">
-            <input maxlength="40" oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
+            <input maxlength="40" onkeydown="value=value.replace(/\s+/g,'')"  oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
                    class="form-control bg-dark text-white" id="floatingInput" placeholder="差事代码">
             <label class="text-white" for="floatingInput">差事代码</label>
         </div>
