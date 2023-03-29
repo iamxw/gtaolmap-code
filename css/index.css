@@ -3,6 +3,7 @@
 
 * {
     font-family: 'Chakra Petch','HarmonyOSHans','HarmonyOSHans','Noto Sans SC','Microsoft YaHei UI',sans-serif;
+    transition: all 100ms;
 }
 
 #title-bar {
