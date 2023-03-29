@@ -45,9 +45,16 @@
         </button>
         <a href="index.html" class="btn btn-info"><i class="bi bi-sun-fill">&nbsp;</i>浅色模式</a>
         <br><br>
-        <p class="mt-3 mb-3 text-muted text-center"><i
-                class="bi bi-lightbulb-fill text-warning">&nbsp;</i><br>请注意：代码通常只有<span
-                class="text-danger fw-bold"><br>数字、英文以及英文的 - 和 _ 标点符号组成</span><br>不能有空格、冒号、中文、以及中文的标点符号<br>最多 40 字
+        <p class="mt-3 mb-3 text-white text-center">
+            <i class="bi bi-lightbulb-fill text-warning"></i>
+            <br>
+            请注意：代码通常只有
+            <br><br>
+            <span class="text-black fw-bold bg-warning p-1">数字、英文以及英文的 - 和 _ 标点符号组成</span>
+            <br><br>
+            不能有空格、冒号、中文、以及中文的标点符号
+            <br>
+            最多 40 字
         </p>
     </form>
 </main>
@@ -259,12 +266,12 @@
 <script>
     // 差事跳转
     function Cmd() {
+        //判断输入框是否为空
         let ifInputEmpty = $('#floatingInput').val();
         if (ifInputEmpty.length === 0) {
             alert('你没输入任何东西，你跳转个寄啊！')
         } else {
             window.open('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('floatingInput').value);
-            // window.location.href = ('#');
         }
     }
 </script>
