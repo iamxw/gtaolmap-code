@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
 * {
-    font-family: 'Chakra Petch', 'HarmonyOSHans', 'HarmonyOSHans', 'Noto Sans SC', 'Microsoft YaHei UI', sans-serif;
+    font-family: 'Chakra Petch', 'Segoe UI Variable Display','HarmonyOSHans', 'PingFang SC','Noto Sans SC', 'Microsoft YaHei UI', sans-serif;
     transition: all 100ms;
 }
 
@@ -47,8 +47,8 @@
 }
 
 #alert-info {
-    background-color: #133852;
-    border-color: #133852;
-    margin-left: 20px;
-    margin-right: 20px;
+    background-color: #134652;
+    border-color: #134652;
+    margin-left: 30px;
+    margin-right: 30px;
 }
