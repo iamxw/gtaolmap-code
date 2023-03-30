@@ -343,8 +343,7 @@
     // 差事跳转
     function Cmd() {
         //判断输入框是否为空
-        let ifInputEmpty = $('#floatingInput').val();
-        if (ifInputEmpty.length === 0) {
+        if ($('ifInputEmpty').length === 0) {
             alert('你没输入任何东西，你跳转个寄啊！')
         } else {
             window.open('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('floatingInput').value);
