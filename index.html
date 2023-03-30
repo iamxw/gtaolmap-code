@@ -40,17 +40,25 @@
                    class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">差事代码</label>
         </div>
-        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-primary"><i
-                class="bi bi-box-arrow-up-right">&nbsp;</i>进入差事
+        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-primary rounded-pill">
+            &nbsp;
+            <i class="bi bi-box-arrow-up-right">&nbsp;</i>
+            进入差事
+            &nbsp;
         </button>
-        <a href="index-darkmode.html" class="btn btn-info"><i class="bi bi-moon-fill">&nbsp;</i>深色模式</a>
+        <a href="index-darkmode.html" class="btn btn-info rounded-pill">
+            &nbsp;
+            <i class="bi bi-moon-fill">&nbsp;</i>
+            深色模式
+            &nbsp;
+        </a>
         <br><br>
-        <p class="mt-3 mb-3 text-black text-center alert alert-success">
+        <p id="alert-info" class="mt-3 mb-3 text-white text-center alert">
             <i class="bi bi-lightbulb-fill text-warning"></i>
             <br>
             请注意：代码通常
             <br>
-            <span class="text-danger fw-bold p-1">只有数字、英文以及英文的 - 和 _ 标点符号组成</span>
+            <span class="text-warning fw-bold p-1">只有数字、英文以及英文的 - 和 _ 标点符号组成</span>
             <br>
             不能有空格、冒号、中文、以及中文的标点符号
             <br>
