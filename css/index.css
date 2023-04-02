@@ -51,5 +51,12 @@
     border-color: #134652;
     margin-left: 30px;
     margin-right: 30px;
-    box-shadow: 0px 0px 10px #133a52;
+    box-shadow: 0 0 10px #133a52;
+}
+
+#dark-alert-info {
+    background-color: #13524d;
+    border-color: #13524d;
+    margin-left: 30px;
+    margin-right: 30px;
 }
