@@ -2,435 +2,170 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>GTA 在线模式差事代码快捷跳转器</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="stars.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>GTA 差事代码重定向</title>
     <link rel="stylesheet" href="lib/bootstrap-5.2.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="lib/bootstrap-icons-1.10.3/bootstrap-icons.css">
+    <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-<!--标题栏部分-->
-<div class="container fixed-top bg-opacity-50 bg-white" id="title-bar">
-    <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
-        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-stars"
-                 viewBox="0 0 16 16">
-                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
-            </svg>
-            &nbsp;
-            <span id="header-title" class="fs-4 fw-bold">GTA 在线模式差事代码跳转器</span>
-        </a>
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">代码帮助</a></li>
-            <li class="nav-item"><a href="#author-recommend" class="nav-link">作者推荐</a></li>
-            <li class="nav-item"><a href="#recommend-errands" class="nav-link">地图推荐</a></li>
-        </ul>
-    </header>
-</div>
-<!--输入代码部分-->
-<main class="form-signin w-100 m-auto d-lg-flex mt-5 pt-5 text-center justify-content-around">
-    <form>
-        <h1 class="h3 mt-4 mb-3 fw-bold">&nbsp;</h1>
-        <div id="input-label" class="form-floating mb-3">
-            <input maxlength="40" onfocus="value=value.replace(/\s+/g,'')" onkeypress="value=value.replace(/\s+/g,'')"
-                   onkeyup="value=value.replace(/\s+/g,'')" onkeydown="value=value.replace(/\s+/g,'')"
-                   oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" type="text"
-                   class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">差事代码</label>
+<body class="bg-black">
+<!--顶栏-->
+<header>
+    <div class="collapse" id="navbarHeader" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white fw-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                            <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"></path>
+                        </svg>
+                        关于重定向器
+                    </h4>
+                    <p class="text-white-50">版本：3.0</p>
+                    <p class="text-white-50">更新日志：UI 更新，只保留暗色系页面，减少无用元素</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white fw-bold">联系作者</h4>
+                    <ul class="list-unstyled">
+                        <!--QQ-->
+                        <li>
+                            <p class="text-white-50">
+                                <span class="bi bi-tencent-qq"></span>
+                                QQ 号：3266681669
+                            </p>
+                        </li>
+                        <!--QQ-->
+                        <li>
+                            <p class="text-white-50">
+                                <span class="bi bi-github"></span>
+                                Github 用户名：Marshmallowlands
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <button onclick="Cmd()" id="submit-code-button" class="w-40 btn btn-primary rounded-pill">
-            &nbsp;
-            <i class="bi bi-box-arrow-up-right">&nbsp;</i>
-            进入差事
-            &nbsp;
-        </button>
-        <a id="dark-button" href="index-darkmode.html" class="btn btn-info rounded-pill">
-            &nbsp;
-            <i class="bi bi-moon-fill">&nbsp;</i>
-            深色模式
-            &nbsp;
-        </a>
-        <br><br>
-        <p id="alert-info" class="mt-3 mb-3 text-white text-center alert">
-            <i class="bi bi-lightbulb-fill text-warning"></i>
+    </div>
+    <!-- 标题 -->
+    <div class="navbar navbar-dark bg-black shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center">
+                &nbsp;&nbsp;
+                <strong>
+                    GTA 差事代码
+                    <span style="background-color: #f79817;padding: 8px;color: black;border-radius: 10px">
+                        重定向
+                        <span class="fs-6">
+                            v3.0
+                        </span>
+                    </span>
+                </strong>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="mb-5 mt-5">
+    <div id="input-code-area">
+        <label for="code">
             <br>
-            请注意：代码通常
+            <h5 class="text-white fw-bold">
+                键入代码，然后点击提交
+            </h5>
+        </label>
+        <div class="input-group">
+            <input maxlength="40" onfocus="value=value.replace(/\s+/g,'')"
+                   onkeypress="value=value.replace(/\s+/g,'')"
+                   onkeyup="value=value.replace(/\s+/g,'')"
+                   onkeydown="value=value.replace(/\s+/g,'')"
+                   oninput="value=value.replace(/[\u4e00-\u9fa5]/ig,'')"
+                   type="text" class="form-control"
+                   id="code"
+                   placeholder="在此键入代码">
+            <button id="submit-to-rockstar-gta-v-job" class="btn fw-semibold">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                提交
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+        </div>
+        <!-- 使用提示 -->
+        <div id="bd-callout-help" class="p-4 m-3" style="padding-left: 4%;padding-right: 4%">
+            <h4 class="text-white">
+                <i class="bi bi-exclamation-diamond-fill"></i>
+                提示
+            </h4>
             <br>
-            <span class="text-warning fw-bold p-1">
-                只有数字、英文以及英文的 - 和 _ 标点符号组成
-            </span>
-            <br>
-            不能有
-            <span class="fw-bold" style="color: rgb(255, 110, 110);">
-                空格、冒号、中文、以及中文的标点符号
-            </span>
-            <br>
-            最多
-            <span class="fw-bold">
-                40
-            </span>
-            字
-        </p>
-        <br>
-        <!--
-        <span id="update-notice" class="text-center text-black-50 fw-bold">
-            <i class="bi bi-exclamation-circle-fill"></i>
-            <br>
-            此项目现在处于暂停更新阶段，如果有人想接手维护
-            <br>
-            请去页面底部找到联系方式并联系我
-            <br>
-        </span>
-        -->
-        <br>
-    </form>
-</main>
-<!--帮助部分-->
-<div class="col-lg-8 mx-auto pt-4 p-4 py-md-5" id="help">
-    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4 fw-bold">使用帮助</span>
-        </a>
-    </header>
+            输入框只允许输入：
+            <span class="text-white" style="border-bottom: 2px solid white">数字、英文以及英文的 - 和 _</span>
+            <br><br>
+            不能出现除上述之外的任何其他字符，否则会出现错误。
+            <br><br>
+            如果你需要其他帮助，请点击下面的 “帮助” 按钮。
+            <div class="text-center pt-5">
+                <a href="" class="btn btn-secondary">帮助</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 推荐的作者 -->
+<div class="container marketing mt-5 mb-2">
+    <br><br>
+    <!-- 隔离线 -->
+    <hr class="featurette-divider mt-0">
+    <div class="row text-white">
+        <h2 class="text-white mt-5 fw-bold">差事作者推荐</h2>
+        <p class="text-muted">头像来源于 R 星官网，随官网更新。</p>
+        <div class="col-lg-4">
+            <div class="text-center">
+                <img class="rounded-pill mt-5" src="https://prod-avatars.akamaized.net/stock-avatars/n/GTAO/ssasss-avatars-sabre-256x256.png" alt="浩然"/>
+            </div>
+            <h2 class="fw-normal fw-bold mt-3 text-center">浩然</h2>
+            <p class="text-center text-muted">B 站上目前<br>最大的跑图 UP 主</p>
+            <p class="text-center"><a class="btn btn-secondary" href="#">查看 »</a></p>
+            <p class="text-center"><a class="btn text-black" style="background-color: #ff64ba" href="#">去 B 站关注他 »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="text-center">
+                <img class="rounded-pill mt-5" src="https://prod-avatars.akamaized.net/custom-avatars/n/F9TB0OmUfkSMZgD6ZMKCpQ.png" alt="86"/>
+            </div>
+            <h2 class="fw-normal fw-bold mt-3 text-center">拔溜</h2>
+            <p class="text-center text-muted">有很多沙雕图，创意图<br>毒图，毛图等</p>
+            <p class="text-center"><a class="btn btn-secondary" href="#">查看 »</a></p>
+            <p class="text-center"><a class="btn text-black" style="background-color: #ff64ba" href="#">去 B 站关注他 »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div class="text-center">
+                <img class="rounded-pill mt-5" src="https://prod-avatars.akamaized.net/stock-avatars/n/GTAO/GTAO-After-Hours-Tale-of-Us-2-256x256.png" alt="Haxdota"/>
+            </div>
+            <h2 class="fw-normal fw-bold mt-3 text-center">汉克斯刀塔</h2>
+            <p class="text-center text-muted">古墓丽影系列（1-7）<br>作者</p>
+            <p class="text-center"><a class="btn btn-secondary" href="#">查看 »</a></p>
+            <p class="text-center"><a class="btn text-black" style="background-color: #ff64ba" href="#">去 B 站关注他 »</a></p>
+        </div>
+        <div class="text-center mt-5">
+            <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/" class="btn btn-outline-warning">更多作者 »</a>
+            <span class="text-muted opacity-50 d-block mt-2">* 前往我的博客查看更多</span>
+        </div>
+    </div>
+</div>
 
-    <main class="text-black">
-        <h4 class="fw-bold">此工具只能给 GTA 在线模式使用</h4>
-        <br><br>
-        其实我就是为的这盘“醋”，包的这顿“饺子”
-        <br><br>
-        好吧，我早就料到会有人不会用这个了，所以我特意做了一个帮助
-        <br><br>
-        <span class="text-success">
-                如果你有完整的链接，那你完全不需要使用这个工具
-        </span>
-        <br><br>
-        如果你只有地图代码的话，比如：B 站 UP 主“浩然 Yz”的视频简介，因为某些
-        <span class="text-success">你懂的</span>
-        的原因，不能放全链接，这时候就需要这个工具了
-        <br><br>
-        目前，你只需要复制一下 UP 主给的代码，然后把
-        <span class="text-success">不是代码的部分</span>
-        删除掉就行，记得
-        <b class="text-success">
-            不要留有空格
-        </b>
-        哦。
-        <br><br>
-        <span class="text-danger fw-bold">
-            如果跳转过去不存在，那可能是作者删了，或者根本没有这个差事，检查你输入的代码，然后再试一次
-        </span>
-        <br><br>
-        就是这些了，呜喵
-        <br><br>
-        <h5 class="fw-bold">还看不懂？</h5>
-        拖出去日了！（不是）
-        <br><br>
-        看下面这张图
-        <br><br>
-        <img class="justify-content-between w-100 pt-1 pb-1" src="img/help-img-01.webp" alt="">
-        <br><br>
-        电脑用户只需要选中并拖拽到输入框，然后点击进入就可以了。
-        <br><br>
-        没多难
-        <br><br>
-        本项目已经开源，欢迎各位审核代码
-    </main>
-    <footer class="pt-5 my-5 text-muted">
-        于 2023 年 3 月 29 日修改
+<!--页脚-->
+<div class="mt-5" id="copyright">
+    <footer>
+        <p class="text-center text-body-secondary text-white-50">
+            莫翰达尔维护，2023.2 ~ 2023.4
+            <br>
+            本项目由 BootStrap 和 JQuery 驱动
+        </p>
     </footer>
 </div>
-<!--作者推荐部分-->
-<div class="container px-4 py-5 pt-4" id="author-recommend">
-    <br><br>
-    <h2 class="pb-2 border-bottom fw-bold">作者推荐</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px" src="img/author-avatar/haoran6rer.jpg" alt=""/>
-            </div>
-            <h3 class="fs-2">浩然</h3>
-            <p>
-                作为在 B 站上目前最大的 GTA 跑图 UP 主，必须有他，下边是他做的差事的链接，可供各位挑选
-                <br>
-                <span class="text-black-50">包含多个账号，将跳转到我的博客查看详情</span>
-            </p>
-            <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/#%E6%B5%A9%E7%84%B6"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-success text-decoration-none">去逝逝</button>
-            </a>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px" src="img/author-avatar/Haxdota.jpg" alt=""/>
-            </div>
-            <h3 class="fs-2">汉克斯刀塔</h3>
-            <p>
-                群友们一般叫他刀老师、刀哥，叫啥的都有
-                <br>
-                他做的差事可不是一般的毒。在国内的
-                <br>
-                跑图圈中，论抠脚程度，还得是这位大佬。
-            </p>
-            <a href="https://socialclub.rockstargames.com/member/hanxdota/jobs"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-primary text-decoration-none">去抠脚</button>
-            </a>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px" src="img/author-avatar/LY86.jpg" alt=""/>
-            </div>
-            <h3 class="fs-2">拔溜（LY66666666）</h3>
-            <p>
-                拔溜的图狗都不玩（DOGE）（🐶）。
-                <br>
-                86 的图喜欢把各种载具玩出花来，虽然细节上
-                <br>
-                不算太精致，但创意程度还是不错的。
-            </p>
-            <a href="https://socialclub.rockstargames.com/member/LY66666666/jobs"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-warning text-decoration-none">谁点谁是 DOG 🐶，点击查看</button>
-            </a>
-        </div>
-        <!--明瞳-->
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px" src="https://prod-avatars.akamaized.net/stock-avatars/n/GTAO/gtao.png"
-                     alt=""/>
-            </div>
-            <h3 class="fs-2 text-dark">明瞳</h3>
-            <p class="text-dark">
-                国人作者。想象力简直是天马行空，
-                <br>
-                游玩起来都有我们意想不到的骚操作。
-                <br>
-                不管是创意还是难度，都是数一数二的。
-            </p>
-            <a href="https://socialclub.rockstargames.com/member/Bright_Minton/jobs"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-danger text-decoration-none">立即去试毒</button>
-            </a>
-        </div>
-        <!--披萨-->
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px"
-                     src="https://prod-avatars.akamaized.net/custom-avatars/n/YAmkwiqGFEqHw3nO37IsWQ.png" alt=""/>
-            </div>
-            <h3 class="fs-2 text-dark">PizzAmarcel</h3>
-            <p class="text-dark">
-                代表作： Project X 系列
-                <br>
-                你们的
-                <del class="text-black-50">只因老师</del>
-                G 老师经常跑这个作者的图
-                <br>
-                这个作者制作的差事质量还是不错的
-            </p>
-            <a href="https://socialclub.rockstargames.com/member/pizzamarcel/jobs"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-success text-decoration-none">去看看</button>
-            </a>
-        </div>
-        <!--约翰比利王-->
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <img width="50px" height="50px" src="https://prod-avatars.akamaized.net/stock-avatars/n/GTAO/gtao.png"
-                     alt=""/>
-            </div>
-            <h3 class="fs-2 text-dark">强尼·比利</h3>
-            <p class="text-dark">
-                代表作： 亚洲水准系列。含金量相当高。
-                <br>
-                同时他也是一名元老级玩家，浩然称他为
-                <br>
-                “超跑毒图第一人”。
-            </p>
-            <a href="https://socialclub.rockstargames.com/member/GamerJohnBilly/jobs"
-               class="icon-link d-inline-flex align-items-center text-decoration-none" target="_blank">
-                <button class="btn btn-info text-decoration-none">跑跑看</button>
-            </a>
-        </div>
-    </div>
-</div>
-<!--地图推荐-->
-<div class="mt-5 pt-5 container px-4 py-5" id="recommend-errands">
-    <br><br>
-    <h2 class="pb-2 border-bottom fw-bold">推荐的差事</h2>
-    <span class="text-black-50">
-        <i class="bi bi-exclamation-circle"></i>
-        不建议萌新现在就上手，难度很高
-    </span>
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <div class="col">
-            <div id="er-1" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/3759/qLmXl7vqo02_A_lQPL5YVQ/2_0.jpg');background-repeat: round">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br>真男人之梦开始的地方</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：LY66666666</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2022 年 10 月</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/qLmXl7vqo02_A_lQPL5YVQ" target="_blank">
-                        <button class="btn btn-primary d-inline">去作死</button>
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div id="er-2" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/1064/TJJX5tyPO0m6loPF1-irNw/2_0.jpg');background-repeat: round">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br>王者之路 9</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：明瞳</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2023 年 1 月</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/TJJX5tyPO0m6loPF1-irNw" target="_blank">
-                        <button class="btn btn-info d-inline">去坐牢</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div id="er-3" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/4628/jue8q-VycEaOu947q-Qc2Q/2_0.jpg');background-repeat: round;background-size: cover">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br>古墓丽影 7</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：汉克斯刀塔</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2023 年 3 月，通关视频 BV 号：BV13M411M72P</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/XGS82kCmMUmOKH5FfX8diw" target="_blank">
-                        <button class="btn btn-success d-inline" style="text-shadow: none">去试毒</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div id="er-3" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/5224/6jvOAEuW3EOxzgVFHdO95w/2_0.jpg');background-repeat: round;background-size: cover">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br><br>旗舰级挑战 2</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：__XyJluGaH__（搬运）</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2020 年 10 月</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/6jvOAEuW3EOxzgVFHdO95w" target="_blank">
-                        <button class="btn btn-info d-inline" style="text-shadow: none">去试试（警告：好评不足 1%）</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div id="er-3" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/9417/lzbssbCUzECReMaTSU873w/2_0.jpg');background-repeat: round;background-size: cover">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br><br>飘飘小火箭 1</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：PetayPanMoFo</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2022 年 6 月</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/lzbssbCUzECReMaTSU873w" target="_blank">
-                        <button class="btn btn-warning d-inline" style="text-shadow: none">去试试</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div id="er-3" class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                 style="background-image: url('https://prod.cloud.rockstargames.com/ugc/gta5mission/0891/MM8piAA00UW5aUyIRErYmQ/2_0.jpg');background-repeat: round;background-size: cover">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><br><br>飘飘小火箭 2</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center me-3">
-                            <small>作者：__-XyJluGaH-__（搬运）</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <small>2023 年 2 月</small>
-                        </li>
-                    </ul>
-                    <a class="text-decoration-none"
-                       href="https://socialclub.rockstargames.com/job/gtav/MM8piAA00UW5aUyIRErYmQ" target="_blank">
-                        <button class="btn btn-danger d-inline" style="text-shadow: none">尝试一下（警告，最高级别困难）</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!--更多按钮-->
-<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-    <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/" target="_blank"
-       class="btn btn-outline-success btn-lg px-4 gap-3" id="more-author"><i class="bi bi-arrow-bar-right">&nbsp;</i>更多差事作者..</a>
-</div>
-<p class="text-black-50 text-center mt-1">点此将跳转到我的博客页</p>
-<!--页脚-->
-<footer id="foot-info" class="pt-5 my-5 text-muted border-top justify-content-center text-center">
-    本项目由 BootStrap 驱动
-    <br><br>
-    版本：2.6
-    <br><br>
-    作者：莫涵达尔
-    <br><br>
-    QQ 号：3266681669
-    <br><br>
-    了解我是谁：<a class="text-decoration-none" href="https://marshmallowlands.github.io/about/" target="_blank">https://marshmallowlands.github.io/about/</a>
-    <br><br>
-    此次更新日志：UI 优化
-    <br><br>
-    <span class="text-danger">免责声明：这只是一个跳转器，跳转器作者不对第三方差事地图里的任何内容负责</span>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    鸡鸡鸡鸡贝比贝比贝
-    <br><br>
-    建议电脑玩
-    <br><br>
-    <a class="btn btn-success text-decoration-none" href="https://marshmallowlands.github.io/cxk-ball/" target="_blank">一起鸡你太美</a>
-</footer>
 </body>
 <script src="lib/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
-<script src="lib/jquery/jquery-3.6.3.min.js"></script>
-<script>
-    // 差事跳转
-    function Cmd() {
-            window.open('https://socialclub.rockstargames.com/job/gtav/' + document.getElementById('floatingInput').value);
-    }
-</script>
+<script src="script/index.js"></script>
 </html>
