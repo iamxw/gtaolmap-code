@@ -46,7 +46,10 @@
     border-left: 0.5rem solid rgb(129, 129, 129);
     color: rgba(255, 255, 255, 0.50);
     border-radius: 5px;
+    /*
     background-image: url("../img/help-img.png");
+    */
+    background-color: #1c1c1c;
     background-position: center;
     background-attachment: fixed;
 }
