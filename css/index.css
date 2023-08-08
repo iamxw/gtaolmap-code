@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
 * {
-    font-family: 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'Roboto', 'HarmonyOSHans','Noto Sans SC', 'Segoe UI Variable Display','HarmonyOSHans', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
+    font-family: 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'Roboto', 'HarmonyOSHans', 'Noto Sans SC', 'Segoe UI Variable Display', 'HarmonyOSHans', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
     transition: all 100ms;
 }
 
@@ -24,7 +24,7 @@
     margin-right: 15%;
 }
 
-#input-code-area #code{
+#input-code-area #code {
     background-color: rgba(0, 0, 0, 0.11);
     backdrop-filter: blur(5px);
     color: white;

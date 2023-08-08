@@ -12,7 +12,7 @@ window.onload = function () {
             window.open('https://socialclub.rockstargames.com/job/gtav/' + mapCode.value);
         }
     })
-    mapCode.addEventListener('click',function (){
+    mapCode.addEventListener('click', function () {
         mapCode.style.borderColor = '#FFFFFF7F';
         jump.textContent = '提交';
         jump.style.color = '#000';
