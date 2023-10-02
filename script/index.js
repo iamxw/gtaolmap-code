@@ -6,7 +6,7 @@ window.onload = function () {
         if (mapCode.value === '') {
             jump.style.backgroundColor = '#dc4846';
             jump.style.color = '#fff';
-            jump.textContent = '文本框为空，不可操作';
+            jump.textContent = '空文本框';
             mapCode.style.borderColor = '#dc4846';
         } else {
             window.open('https://socialclub.rockstargames.com/job/gtav/' + mapCode.value);
@@ -14,7 +14,7 @@ window.onload = function () {
     })
     mapCode.addEventListener('click', function () {
         mapCode.style.borderColor = '#FFFFFF7F';
-        jump.textContent = '提交';
+        jump.textContent = '搜索差事';
         jump.style.color = '#000';
         jump.style.backgroundColor = '#fff';
     })
