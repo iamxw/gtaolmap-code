@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+   Petch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 * {
-    font-family: 'Blender Pro','Chakra Petch','Barlow','Roboto', 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'HarmonyOSHans', 'Noto Sans SC', 'Segoe UI Variable Display', 'HarmonyOSHans', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
+    font-family: 'Chakra Petch', 'Barlow', 'Roboto', 'Segoe UI Variable Display', 'Segoe UI Variable Text', 'HarmonyOSHans', 'Noto Sans SC', 'Segoe UI Variable Display', 'HarmonyOSHans', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
     transition: all 100ms;
 }
 
