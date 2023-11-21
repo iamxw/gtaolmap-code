@@ -8,6 +8,14 @@
     transition: all 100ms;
 }
 
+#body-bgColor {
+    background-color: #21252b;
+}
+
+.input-group {
+    border-radius: 100vh !important;
+}
+
 .row {
     margin-left: 5%;
     margin-right: 5%;
@@ -22,8 +30,8 @@
 }
 
 #input-code-area {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 14%;
+    margin-right: 14%;
 }
 
 #input-code-area #code {
@@ -32,13 +40,16 @@
     color: white;
     border-color: #bebebe;
     outline-color: #0dcaf0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-top-left-radius: 100vh;
+    border-bottom-left-radius: 100vh;
+    padding: 10px 20px;
 }
 
 #submit-to-rockstar-gta-v-job {
     background-color: white;
     color: black;
+    border-top-right-radius: 100vh;
+    border-bottom-right-radius: 100vh;
 }
 
 /* Callout 组件 */

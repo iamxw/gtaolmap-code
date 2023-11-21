@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="bg-black">
+<body id="body-bgColor">
 <!--顶栏-->
 <header>
     <div class="collapse" id="navbarHeader">
@@ -24,7 +24,7 @@
                         </svg>
                         关于重定向器
                     </h4>
-                    <p class="text-white-50">版本：3.2</p>
+                    <p class="text-white-50">版本：3.3</p>
                     <p class="text-white-50">更新日志：修复 BUG</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
@@ -56,10 +56,10 @@
                 &nbsp;&nbsp;
                 <strong>
                     GTA 差事代码
-                    <span style="background-color: #f79817;padding: 8px;color: black;border-radius: 10px">
+                    <span style="background-color: #0dcaf0;padding: 8px;color: black;border-radius: 10px">
                         重定向器
                         <span class="fs-6">
-                            v3.2
+                            v3.3
                         </span>
                     </span>
                 </strong>
@@ -101,30 +101,30 @@
         <p class="m-3 fw-bold fs-6" id="tips">Enter the code in the input box, then click "Search for this job" button.</p>
         <!-- 使用提示 -->
         <div id="bd-callout-help" class="p-4 m-3" style="padding-left: 4%;padding-right: 4%">
-            <h4 class="text-white fw-bold">
+            <h5 class="text-white fw-bold">
                 <i class="bi bi-exclamation-circle-fill"></i>
                 注意
-            </h4>
-            <br>
+            </h5>
             输入框只允许输入：
             <span class="text-white fw-bold" style="border-bottom: 0 solid white">数字、英文以及英文的 - 和 _</span>
-            ，除上述之外，不能有任何其他字符，否则会出现错误。
+            ，除上述之外，<b class="text-warning">不能有任何其他字符</b>，否则会出现错误。
             <br><br>
-            其他帮助，点击下面的【更多详情】按钮。
+            其他帮助，点击下面的【更多详情】按钮。<span class="text-info">若要赞赏，同样到更多详情页面查看详情。</span>
             <br>
-            <span class="text-warning">若要赞赏，同样到更多详情页面查看详情。</span>
             <div class="text-center pt-5">
                 <a style="padding-left: 25px;padding-right: 25px;"
                    href="help.html"
-                   class="btn btn-primary"
+                   class="btn btn-info"
                    target="_blank">
                     更多详情 »
                 </a>
                 <br><br>
+                <!--
                 <p class="text-center">
                     <a class="btn text-black" style="background-color: #ff64ba"
                        href="https://space.bilibili.com/92466307">B 站关注浩然 »</a>
                 </p>
+                -->
             </div>
         </div>
     </div>
@@ -222,7 +222,7 @@
                      src="https://prod-avatars.akamaized.net/custom-avatars/n/XG_QW71C8EiU-0r-JeXkWg.png"
                      alt="-S-I-B-"/>
             </div>
-            <h2 class="fw-normal fw-bold mt-3 text-center" style="font-family: 'Ubuntu Mono'">SIB</h2>
+            <h2 class="fw-normal fw-bold mt-3 text-center" style="font-family: 'Ubuntu Mono',sans-serif">SIB</h2>
             <p class="text-center text-muted">自动图、娱乐图、毒图<br>搬运者</p>
             <p class="text-center"><a class="btn btn-secondary"
                                       href="https://socialclub.rockstargames.com/member/-S-I-B-/jobs">查看差事 »</a>
@@ -254,7 +254,7 @@
         </div>
         <div class="text-center mt-5">
             <a href="https://marshmallowlands.github.io/2023/03/05/recommend-GTA-MAP-Author/"
-               class="btn btn-outline-warning">查找更多作者 »</a>
+               class="btn btn-outline-info">查找更多作者 »</a>
             <span class="text-muted opacity-50 d-block mt-2">* 前往我的博客查看更多</span>
         </div>
     </div>

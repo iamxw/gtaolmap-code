@@ -9,7 +9,17 @@
 }
 
 #example-map-code:hover {
-    background-color: #0c63e4 !important;
+    background-color: #4285f4 !important;
     color: white !important;
     cursor: text;
+}
+
+#help-tips {
+    background-color: #4285f4;
+    color: white;
+}
+
+#code-area {
+    background-color: #323844;
+    border-radius: 30px !important;
 }
