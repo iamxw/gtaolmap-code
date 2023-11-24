@@ -99,3 +99,20 @@ hr {
     background-color: rgba(26, 26, 26, 0);
     padding: 30px 10px 20px;
 }
+
+#moreinfo-btn {
+    border-radius: 10vh;
+    transition: all 300ms;
+}
+
+#moreinfo-btn:active {
+    background-color: #0aa6c9;
+    border-color: #0aa6c9;
+    border-radius: 1vh;
+}
+
+.btn {
+    border-radius: 10vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
